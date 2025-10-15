@@ -12,7 +12,7 @@ Automates launching the `ollama/ollama` container with sensible defaults so you 
 1. Verifies Docker is installed and running.
 2. Stops/removes any existing `ollama` container.
 3. Creates `ollama/` beside the script for persistent model state.
-4. Uses the hardcoded `BEARER_TOKEN` (update this before sharing the server).
+4. Generates a random bearer token. It is possible to hardcode a bearer token as well if needed.
 5. Picks GPU runtime if `nvidia-smi` succeeds; otherwise uses CPU-only mode.
 6. Waits for Ollama to become ready on `localhost:11434`.
 7. Ensures the models listed in the `models` array are available, pulling any missing.
